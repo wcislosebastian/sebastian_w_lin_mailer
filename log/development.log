@@ -32,3 +32,69 @@ Content-Transfer-Encoding: 7bit
   </body>
 </html>
 
+Started GET "/sidekiq" for 127.0.0.1 at 2019-11-24 09:16:22 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: b2d031cc-e9a3-4197-b7b9-626e918415f9) to Sidekiq(mailers) with arguments: "UserMailer", "welcome_email", "deliver_now"
+[ActiveJob] [ActionMailer::DeliveryJob] [b2d031cc-e9a3-4197-b7b9-626e918415f9] Performing ActionMailer::DeliveryJob (Job ID: b2d031cc-e9a3-4197-b7b9-626e918415f9) from Sidekiq(mailers) with arguments: "UserMailer", "welcome_email", "deliver_now"
+[ActiveJob] [ActionMailer::DeliveryJob] [b2d031cc-e9a3-4197-b7b9-626e918415f9]   Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [b2d031cc-e9a3-4197-b7b9-626e918415f9]   Rendered user_mailer/welcome_email.html.erb within layouts/mailer (1.6ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [b2d031cc-e9a3-4197-b7b9-626e918415f9] UserMailer#welcome_email: processed outbound mail in 110.3ms
+[ActiveJob] [ActionMailer::DeliveryJob] [b2d031cc-e9a3-4197-b7b9-626e918415f9] Sent mail to project@test.com (24.5ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [b2d031cc-e9a3-4197-b7b9-626e918415f9] Date: Sun, 24 Nov 2019 09:18:01 +0100
+From: from@example.com
+To: project@test.com
+Message-ID: <5dda3cb986508_41e43fd8d695fee0265da@MacBook-Pro-Sebastian.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Welcome to example.com, </h1>
+  <p>
+    You have successfully signed up to example.com,
+  </p>
+<p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [b2d031cc-e9a3-4197-b7b9-626e918415f9] Performed ActionMailer::DeliveryJob (Job ID: b2d031cc-e9a3-4197-b7b9-626e918415f9) from Sidekiq(mailers) in 205.47ms
