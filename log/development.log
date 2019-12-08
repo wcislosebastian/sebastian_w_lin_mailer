@@ -98,3 +98,874 @@ Content-Transfer-Encoding: 7bit
 </html>
 
 [ActiveJob] [ActionMailer::DeliveryJob] [b2d031cc-e9a3-4197-b7b9-626e918415f9] Performed ActionMailer::DeliveryJob (Job ID: b2d031cc-e9a3-4197-b7b9-626e918415f9) from Sidekiq(mailers) in 205.47ms
+Started GET "/" for ::1 at 2019-12-08 11:02:05 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (3.1ms)
+Completed 200 OK in 21ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/submit_email" for ::1 at 2019-12-08 11:10:28 +0100
+  
+ActionController::RoutingError (undefined method `respond_to' for ApplicationController:Class
+Did you mean?  respond_to?):
+  
+app/controllers/application_controller.rb:5:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/submit_email_controller.rb:1:in `<main>'
+Started GET "/submit_email" for ::1 at 2019-12-08 11:14:21 +0100
+Processing by SubmitEmailController#index as */*
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: 6a85c3dc-bc01-41e5-b994-8d27a77d1ad4) to Sidekiq(mailers) with arguments: "UserMailer", "welcome_email", "deliver_now"
+Completed 200 OK in 467ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+[ActiveJob] [ActionMailer::DeliveryJob] [6a85c3dc-bc01-41e5-b994-8d27a77d1ad4] Performing ActionMailer::DeliveryJob (Job ID: 6a85c3dc-bc01-41e5-b994-8d27a77d1ad4) from Sidekiq(mailers) with arguments: "UserMailer", "welcome_email", "deliver_now"
+[ActiveJob] [ActionMailer::DeliveryJob] [6a85c3dc-bc01-41e5-b994-8d27a77d1ad4]   Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [6a85c3dc-bc01-41e5-b994-8d27a77d1ad4]   Rendered user_mailer/welcome_email.html.erb within layouts/mailer (1.3ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [6a85c3dc-bc01-41e5-b994-8d27a77d1ad4] UserMailer#welcome_email: processed outbound mail in 122.5ms
+[ActiveJob] [ActionMailer::DeliveryJob] [6a85c3dc-bc01-41e5-b994-8d27a77d1ad4] Sent mail to project@test.com (32.6ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [6a85c3dc-bc01-41e5-b994-8d27a77d1ad4] Date: Sun, 08 Dec 2019 11:14:22 +0100
+From: from@example.com
+To: project@test.com
+Message-ID: <5decccfe4bb4d_6db33ff7652f267c10681@MacBook-Pro-Sebastian.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Welcome to example.com, </h1>
+  <p>
+    You have successfully signed up to example.com,
+  </p>
+<p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [6a85c3dc-bc01-41e5-b994-8d27a77d1ad4] Performed ActionMailer::DeliveryJob (Job ID: 6a85c3dc-bc01-41e5-b994-8d27a77d1ad4) from Sidekiq(mailers) in 296.38ms
+Started GET "/submit_email" for ::1 at 2019-12-08 11:32:59 +0100
+Processing by SubmitEmailController#index as */*
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: f20dc9f9-ebc1-46f0-921c-23d57a28eb63) to Sidekiq(mailers) with arguments: "UserMailer", "welcome_email", "deliver_now"
+Completed 200 OK in 382ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+[ActiveJob] [ActionMailer::DeliveryJob] [f20dc9f9-ebc1-46f0-921c-23d57a28eb63] Performing ActionMailer::DeliveryJob (Job ID: f20dc9f9-ebc1-46f0-921c-23d57a28eb63) from Sidekiq(mailers) with arguments: "UserMailer", "welcome_email", "deliver_now"
+[ActiveJob] [ActionMailer::DeliveryJob] [f20dc9f9-ebc1-46f0-921c-23d57a28eb63]   Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [f20dc9f9-ebc1-46f0-921c-23d57a28eb63]   Rendered user_mailer/welcome_email.html.erb within layouts/mailer (2.0ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [f20dc9f9-ebc1-46f0-921c-23d57a28eb63] UserMailer#welcome_email: processed outbound mail in 115.2ms
+[ActiveJob] [ActionMailer::DeliveryJob] [f20dc9f9-ebc1-46f0-921c-23d57a28eb63] Sent mail to project@test.com (552.8ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [f20dc9f9-ebc1-46f0-921c-23d57a28eb63] Date: Sun, 08 Dec 2019 11:32:59 +0100
+From: from@example.com
+To: project@test.com
+Message-ID: <5decd15bd3e31_6e323fc5389a6d2475678@MacBook-Pro-Sebastian.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Welcome to example.com, </h1>
+  <p>
+    You have successfully signed up to example.com,
+  </p>
+<p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [f20dc9f9-ebc1-46f0-921c-23d57a28eb63] Error performing ActionMailer::DeliveryJob (Job ID: f20dc9f9-ebc1-46f0-921c-23d57a28eb63) from Sidekiq(mailers) in 779.18ms: Net::SMTPAuthenticationError (535-5.7.8 Username and Password not accepted. Learn more at
+):
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/2.6.0/net/smtp.rb:981:in `check_auth_response'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/2.6.0/net/smtp.rb:736:in `auth_plain'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/2.6.0/net/smtp.rb:728:in `authenticate'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/2.6.0/net/smtp.rb:565:in `do_start'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/2.6.0/net/smtp.rb:518:in `start'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/mail-2.7.1/lib/mail/network/delivery_methods/smtp.rb:109:in `start_smtp_session'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/mail-2.7.1/lib/mail/network/delivery_methods/smtp.rb:100:in `deliver!'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/mail-2.7.1/lib/mail/message.rb:2159:in `do_delivery'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/mail-2.7.1/lib/mail/message.rb:260:in `block in deliver'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actionmailer-5.2.3/lib/action_mailer/base.rb:560:in `block in deliver_mail'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/notifications.rb:168:in `block in instrument'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/notifications.rb:168:in `instrument'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actionmailer-5.2.3/lib/action_mailer/base.rb:558:in `deliver_mail'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/mail-2.7.1/lib/mail/message.rb:260:in `deliver'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actionmailer-5.2.3/lib/action_mailer/message_delivery.rb:114:in `block in deliver_now'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actionmailer-5.2.3/lib/action_mailer/rescuable.rb:17:in `handle_exceptions'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actionmailer-5.2.3/lib/action_mailer/message_delivery.rb:113:in `deliver_now'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actionmailer-5.2.3/lib/action_mailer/delivery_job.rb:16:in `perform'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/execution.rb:39:in `block in perform_now'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/i18n-1.7.0/lib/i18n.rb:297:in `with_locale'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/logging.rb:26:in `block (4 levels) in <module:Logging>'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/notifications.rb:168:in `block in instrument'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/notifications.rb:168:in `instrument'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/logging.rb:25:in `block (3 levels) in <module:Logging>'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/logging.rb:46:in `block in tag_logger'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:28:in `tagged'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `tagged'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/logging.rb:46:in `tag_logger'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/logging.rb:22:in `block (2 levels) in <module:Logging>'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/execution.rb:38:in `perform_now'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/execution.rb:24:in `block in execute'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/railtie.rb:28:in `block (4 levels) in <class:Railtie>'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/reloader.rb:73:in `block in wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/execution_wrapper.rb:83:in `wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/reloader.rb:72:in `wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/railtie.rb:27:in `block (3 levels) in <class:Railtie>'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/execution.rb:22:in `execute'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/queue_adapters/sidekiq_adapter.rb:42:in `perform'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:196:in `execute_job'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:164:in `block (2 levels) in process'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/middleware/chain.rb:133:in `invoke'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:163:in `block in process'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:136:in `block (6 levels) in dispatch'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/job_retry.rb:111:in `local'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:135:in `block (5 levels) in dispatch'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/rails.rb:43:in `block in call'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/reloader.rb:73:in `block in wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/reloader.rb:72:in `wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/rails.rb:42:in `call'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:131:in `block (4 levels) in dispatch'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:257:in `stats'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:126:in `block (3 levels) in dispatch'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/job_logger.rb:13:in `call'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:125:in `block (2 levels) in dispatch'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/job_retry.rb:78:in `global'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:124:in `block in dispatch'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/logger.rb:10:in `with'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/job_logger.rb:33:in `prepare'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:123:in `dispatch'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:162:in `process'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:78:in `process_one'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:68:in `run'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/util.rb:15:in `watchdog'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/util.rb:24:in `block in safe_thread'
+[ActiveJob] [ActionMailer::DeliveryJob] [f20dc9f9-ebc1-46f0-921c-23d57a28eb63] Performing ActionMailer::DeliveryJob (Job ID: f20dc9f9-ebc1-46f0-921c-23d57a28eb63) from Sidekiq(mailers) with arguments: "UserMailer", "welcome_email", "deliver_now"
+[ActiveJob] [ActionMailer::DeliveryJob] [f20dc9f9-ebc1-46f0-921c-23d57a28eb63]   Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [f20dc9f9-ebc1-46f0-921c-23d57a28eb63]   Rendered user_mailer/welcome_email.html.erb within layouts/mailer (0.2ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [f20dc9f9-ebc1-46f0-921c-23d57a28eb63] UserMailer#welcome_email: processed outbound mail in 7.8ms
+[ActiveJob] [ActionMailer::DeliveryJob] [f20dc9f9-ebc1-46f0-921c-23d57a28eb63] Sent mail to project@test.com (436.1ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [f20dc9f9-ebc1-46f0-921c-23d57a28eb63] Date: Sun, 08 Dec 2019 11:33:25 +0100
+From: from@example.com
+To: project@test.com
+Message-ID: <5decd17529799_6e323fc538a079587575c@MacBook-Pro-Sebastian.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Welcome to example.com, </h1>
+  <p>
+    You have successfully signed up to example.com,
+  </p>
+<p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [f20dc9f9-ebc1-46f0-921c-23d57a28eb63] Error performing ActionMailer::DeliveryJob (Job ID: f20dc9f9-ebc1-46f0-921c-23d57a28eb63) from Sidekiq(mailers) in 444.51ms: Net::SMTPAuthenticationError (535-5.7.8 Username and Password not accepted. Learn more at
+):
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/2.6.0/net/smtp.rb:981:in `check_auth_response'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/2.6.0/net/smtp.rb:736:in `auth_plain'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/2.6.0/net/smtp.rb:728:in `authenticate'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/2.6.0/net/smtp.rb:565:in `do_start'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/2.6.0/net/smtp.rb:518:in `start'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/mail-2.7.1/lib/mail/network/delivery_methods/smtp.rb:109:in `start_smtp_session'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/mail-2.7.1/lib/mail/network/delivery_methods/smtp.rb:100:in `deliver!'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/mail-2.7.1/lib/mail/message.rb:2159:in `do_delivery'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/mail-2.7.1/lib/mail/message.rb:260:in `block in deliver'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actionmailer-5.2.3/lib/action_mailer/base.rb:560:in `block in deliver_mail'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/notifications.rb:168:in `block in instrument'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/notifications.rb:168:in `instrument'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actionmailer-5.2.3/lib/action_mailer/base.rb:558:in `deliver_mail'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/mail-2.7.1/lib/mail/message.rb:260:in `deliver'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actionmailer-5.2.3/lib/action_mailer/message_delivery.rb:114:in `block in deliver_now'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actionmailer-5.2.3/lib/action_mailer/rescuable.rb:17:in `handle_exceptions'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actionmailer-5.2.3/lib/action_mailer/message_delivery.rb:113:in `deliver_now'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actionmailer-5.2.3/lib/action_mailer/delivery_job.rb:16:in `perform'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/execution.rb:39:in `block in perform_now'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/i18n-1.7.0/lib/i18n.rb:297:in `with_locale'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/logging.rb:26:in `block (4 levels) in <module:Logging>'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/notifications.rb:168:in `block in instrument'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/notifications.rb:168:in `instrument'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/logging.rb:25:in `block (3 levels) in <module:Logging>'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/logging.rb:46:in `block in tag_logger'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:28:in `tagged'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `tagged'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/logging.rb:46:in `tag_logger'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/logging.rb:22:in `block (2 levels) in <module:Logging>'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/execution.rb:38:in `perform_now'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/execution.rb:24:in `block in execute'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/railtie.rb:28:in `block (4 levels) in <class:Railtie>'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/reloader.rb:73:in `block in wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/execution_wrapper.rb:83:in `wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/reloader.rb:72:in `wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/railtie.rb:27:in `block (3 levels) in <class:Railtie>'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/execution.rb:22:in `execute'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/queue_adapters/sidekiq_adapter.rb:42:in `perform'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:196:in `execute_job'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:164:in `block (2 levels) in process'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/middleware/chain.rb:133:in `invoke'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:163:in `block in process'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:136:in `block (6 levels) in dispatch'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/job_retry.rb:111:in `local'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:135:in `block (5 levels) in dispatch'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/rails.rb:43:in `block in call'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/reloader.rb:73:in `block in wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/reloader.rb:72:in `wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/rails.rb:42:in `call'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:131:in `block (4 levels) in dispatch'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:257:in `stats'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:126:in `block (3 levels) in dispatch'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/job_logger.rb:13:in `call'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:125:in `block (2 levels) in dispatch'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/job_retry.rb:78:in `global'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:124:in `block in dispatch'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/logger.rb:10:in `with'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/job_logger.rb:33:in `prepare'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:123:in `dispatch'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:162:in `process'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:78:in `process_one'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:68:in `run'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/util.rb:15:in `watchdog'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/util.rb:24:in `block in safe_thread'
+[ActiveJob] [ActionMailer::DeliveryJob] [f20dc9f9-ebc1-46f0-921c-23d57a28eb63] Performing ActionMailer::DeliveryJob (Job ID: f20dc9f9-ebc1-46f0-921c-23d57a28eb63) from Sidekiq(mailers) with arguments: "UserMailer", "welcome_email", "deliver_now"
+[ActiveJob] [ActionMailer::DeliveryJob] [f20dc9f9-ebc1-46f0-921c-23d57a28eb63]   Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [f20dc9f9-ebc1-46f0-921c-23d57a28eb63]   Rendered user_mailer/welcome_email.html.erb within layouts/mailer (0.4ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [f20dc9f9-ebc1-46f0-921c-23d57a28eb63] UserMailer#welcome_email: processed outbound mail in 9.7ms
+[ActiveJob] [ActionMailer::DeliveryJob] [f20dc9f9-ebc1-46f0-921c-23d57a28eb63] Sent mail to project@test.com (483.4ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [f20dc9f9-ebc1-46f0-921c-23d57a28eb63] Date: Sun, 08 Dec 2019 11:34:24 +0100
+From: from@example.com
+To: project@test.com
+Message-ID: <5decd1b021866_6e323fc538a4208075887@MacBook-Pro-Sebastian.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Welcome to example.com, </h1>
+  <p>
+    You have successfully signed up to example.com,
+  </p>
+<p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [f20dc9f9-ebc1-46f0-921c-23d57a28eb63] Error performing ActionMailer::DeliveryJob (Job ID: f20dc9f9-ebc1-46f0-921c-23d57a28eb63) from Sidekiq(mailers) in 493.99ms: Net::SMTPAuthenticationError (535-5.7.8 Username and Password not accepted. Learn more at
+):
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/2.6.0/net/smtp.rb:981:in `check_auth_response'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/2.6.0/net/smtp.rb:736:in `auth_plain'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/2.6.0/net/smtp.rb:728:in `authenticate'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/2.6.0/net/smtp.rb:565:in `do_start'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/2.6.0/net/smtp.rb:518:in `start'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/mail-2.7.1/lib/mail/network/delivery_methods/smtp.rb:109:in `start_smtp_session'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/mail-2.7.1/lib/mail/network/delivery_methods/smtp.rb:100:in `deliver!'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/mail-2.7.1/lib/mail/message.rb:2159:in `do_delivery'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/mail-2.7.1/lib/mail/message.rb:260:in `block in deliver'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actionmailer-5.2.3/lib/action_mailer/base.rb:560:in `block in deliver_mail'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/notifications.rb:168:in `block in instrument'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/notifications.rb:168:in `instrument'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actionmailer-5.2.3/lib/action_mailer/base.rb:558:in `deliver_mail'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/mail-2.7.1/lib/mail/message.rb:260:in `deliver'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actionmailer-5.2.3/lib/action_mailer/message_delivery.rb:114:in `block in deliver_now'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actionmailer-5.2.3/lib/action_mailer/rescuable.rb:17:in `handle_exceptions'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actionmailer-5.2.3/lib/action_mailer/message_delivery.rb:113:in `deliver_now'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actionmailer-5.2.3/lib/action_mailer/delivery_job.rb:16:in `perform'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/execution.rb:39:in `block in perform_now'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/i18n-1.7.0/lib/i18n.rb:297:in `with_locale'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/logging.rb:26:in `block (4 levels) in <module:Logging>'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/notifications.rb:168:in `block in instrument'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/notifications.rb:168:in `instrument'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/logging.rb:25:in `block (3 levels) in <module:Logging>'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/logging.rb:46:in `block in tag_logger'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:28:in `tagged'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `tagged'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/logging.rb:46:in `tag_logger'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/logging.rb:22:in `block (2 levels) in <module:Logging>'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/execution.rb:38:in `perform_now'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/execution.rb:24:in `block in execute'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/railtie.rb:28:in `block (4 levels) in <class:Railtie>'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/reloader.rb:73:in `block in wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/execution_wrapper.rb:83:in `wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/reloader.rb:72:in `wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/railtie.rb:27:in `block (3 levels) in <class:Railtie>'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/execution.rb:22:in `execute'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/queue_adapters/sidekiq_adapter.rb:42:in `perform'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:196:in `execute_job'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:164:in `block (2 levels) in process'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/middleware/chain.rb:133:in `invoke'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:163:in `block in process'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:136:in `block (6 levels) in dispatch'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/job_retry.rb:111:in `local'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:135:in `block (5 levels) in dispatch'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/rails.rb:43:in `block in call'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/reloader.rb:73:in `block in wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/reloader.rb:72:in `wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/rails.rb:42:in `call'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:131:in `block (4 levels) in dispatch'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:257:in `stats'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:126:in `block (3 levels) in dispatch'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/job_logger.rb:13:in `call'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:125:in `block (2 levels) in dispatch'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/job_retry.rb:78:in `global'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:124:in `block in dispatch'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/logger.rb:10:in `with'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/job_logger.rb:33:in `prepare'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:123:in `dispatch'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:162:in `process'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:78:in `process_one'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:68:in `run'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/util.rb:15:in `watchdog'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/util.rb:24:in `block in safe_thread'
+Started GET "/submit_email" for ::1 at 2019-12-08 11:34:37 +0100
+Processing by SubmitEmailController#index as */*
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: 2a4a3c36-38e5-448f-bec1-7516251f8ba9) to Sidekiq(mailers) with arguments: "UserMailer", "welcome_email", "deliver_now"
+[ActiveJob] [ActionMailer::DeliveryJob] [2a4a3c36-38e5-448f-bec1-7516251f8ba9] Performing ActionMailer::DeliveryJob (Job ID: 2a4a3c36-38e5-448f-bec1-7516251f8ba9) from Sidekiq(mailers) with arguments: "UserMailer", "welcome_email", "deliver_now"
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+[ActiveJob] [ActionMailer::DeliveryJob] [2a4a3c36-38e5-448f-bec1-7516251f8ba9]   Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [2a4a3c36-38e5-448f-bec1-7516251f8ba9]   Rendered user_mailer/welcome_email.html.erb within layouts/mailer (0.4ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [2a4a3c36-38e5-448f-bec1-7516251f8ba9] UserMailer#welcome_email: processed outbound mail in 15.0ms
+[ActiveJob] [ActionMailer::DeliveryJob] [2a4a3c36-38e5-448f-bec1-7516251f8ba9] Sent mail to project@test.com (546.9ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [2a4a3c36-38e5-448f-bec1-7516251f8ba9] Date: Sun, 08 Dec 2019 11:34:37 +0100
+From: from@example.com
+To: project@test.com
+Message-ID: <5decd1bdab41_6e323fc538aca2b47595b@MacBook-Pro-Sebastian.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Welcome to example.com, </h1>
+  <p>
+    You have successfully signed up to example.com,
+  </p>
+<p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [2a4a3c36-38e5-448f-bec1-7516251f8ba9] Error performing ActionMailer::DeliveryJob (Job ID: 2a4a3c36-38e5-448f-bec1-7516251f8ba9) from Sidekiq(mailers) in 562.64ms: Net::SMTPAuthenticationError (535-5.7.8 Username and Password not accepted. Learn more at
+):
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/2.6.0/net/smtp.rb:981:in `check_auth_response'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/2.6.0/net/smtp.rb:736:in `auth_plain'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/2.6.0/net/smtp.rb:728:in `authenticate'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/2.6.0/net/smtp.rb:565:in `do_start'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/2.6.0/net/smtp.rb:518:in `start'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/mail-2.7.1/lib/mail/network/delivery_methods/smtp.rb:109:in `start_smtp_session'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/mail-2.7.1/lib/mail/network/delivery_methods/smtp.rb:100:in `deliver!'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/mail-2.7.1/lib/mail/message.rb:2159:in `do_delivery'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/mail-2.7.1/lib/mail/message.rb:260:in `block in deliver'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actionmailer-5.2.3/lib/action_mailer/base.rb:560:in `block in deliver_mail'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/notifications.rb:168:in `block in instrument'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/notifications.rb:168:in `instrument'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actionmailer-5.2.3/lib/action_mailer/base.rb:558:in `deliver_mail'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/mail-2.7.1/lib/mail/message.rb:260:in `deliver'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actionmailer-5.2.3/lib/action_mailer/message_delivery.rb:114:in `block in deliver_now'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actionmailer-5.2.3/lib/action_mailer/rescuable.rb:17:in `handle_exceptions'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actionmailer-5.2.3/lib/action_mailer/message_delivery.rb:113:in `deliver_now'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actionmailer-5.2.3/lib/action_mailer/delivery_job.rb:16:in `perform'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/execution.rb:39:in `block in perform_now'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/i18n-1.7.0/lib/i18n.rb:297:in `with_locale'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/logging.rb:26:in `block (4 levels) in <module:Logging>'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/notifications.rb:168:in `block in instrument'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/notifications.rb:168:in `instrument'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/logging.rb:25:in `block (3 levels) in <module:Logging>'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/logging.rb:46:in `block in tag_logger'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:28:in `tagged'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `tagged'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/logging.rb:46:in `tag_logger'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/logging.rb:22:in `block (2 levels) in <module:Logging>'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/execution.rb:38:in `perform_now'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/execution.rb:24:in `block in execute'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/railtie.rb:28:in `block (4 levels) in <class:Railtie>'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/reloader.rb:73:in `block in wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/execution_wrapper.rb:83:in `wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/reloader.rb:72:in `wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/railtie.rb:27:in `block (3 levels) in <class:Railtie>'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/execution.rb:22:in `execute'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/queue_adapters/sidekiq_adapter.rb:42:in `perform'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:196:in `execute_job'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:164:in `block (2 levels) in process'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/middleware/chain.rb:133:in `invoke'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:163:in `block in process'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:136:in `block (6 levels) in dispatch'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/job_retry.rb:111:in `local'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:135:in `block (5 levels) in dispatch'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/rails.rb:43:in `block in call'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/reloader.rb:73:in `block in wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/reloader.rb:72:in `wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/rails.rb:42:in `call'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:131:in `block (4 levels) in dispatch'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:257:in `stats'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:126:in `block (3 levels) in dispatch'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/job_logger.rb:13:in `call'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:125:in `block (2 levels) in dispatch'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/job_retry.rb:78:in `global'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:124:in `block in dispatch'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/logger.rb:10:in `with'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/job_logger.rb:33:in `prepare'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:123:in `dispatch'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:162:in `process'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:78:in `process_one'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:68:in `run'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/util.rb:15:in `watchdog'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/util.rb:24:in `block in safe_thread'
+[ActiveJob] [ActionMailer::DeliveryJob] [2a4a3c36-38e5-448f-bec1-7516251f8ba9] Performing ActionMailer::DeliveryJob (Job ID: 2a4a3c36-38e5-448f-bec1-7516251f8ba9) from Sidekiq(mailers) with arguments: "UserMailer", "welcome_email", "deliver_now"
+[ActiveJob] [ActionMailer::DeliveryJob] [2a4a3c36-38e5-448f-bec1-7516251f8ba9]   Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [2a4a3c36-38e5-448f-bec1-7516251f8ba9]   Rendered user_mailer/welcome_email.html.erb within layouts/mailer (0.4ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [2a4a3c36-38e5-448f-bec1-7516251f8ba9] UserMailer#welcome_email: processed outbound mail in 6.9ms
+[ActiveJob] [ActionMailer::DeliveryJob] [2a4a3c36-38e5-448f-bec1-7516251f8ba9] Sent mail to project@test.com (502.8ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [2a4a3c36-38e5-448f-bec1-7516251f8ba9] Date: Sun, 08 Dec 2019 11:35:08 +0100
+From: from@example.com
+To: project@test.com
+Message-ID: <5decd1dceb0_6e323fc538af33e476020@MacBook-Pro-Sebastian.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Welcome to example.com, </h1>
+  <p>
+    You have successfully signed up to example.com,
+  </p>
+<p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [2a4a3c36-38e5-448f-bec1-7516251f8ba9] Error performing ActionMailer::DeliveryJob (Job ID: 2a4a3c36-38e5-448f-bec1-7516251f8ba9) from Sidekiq(mailers) in 512.49ms: Net::SMTPAuthenticationError (535-5.7.8 Username and Password not accepted. Learn more at
+):
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/2.6.0/net/smtp.rb:981:in `check_auth_response'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/2.6.0/net/smtp.rb:736:in `auth_plain'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/2.6.0/net/smtp.rb:728:in `authenticate'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/2.6.0/net/smtp.rb:565:in `do_start'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/2.6.0/net/smtp.rb:518:in `start'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/mail-2.7.1/lib/mail/network/delivery_methods/smtp.rb:109:in `start_smtp_session'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/mail-2.7.1/lib/mail/network/delivery_methods/smtp.rb:100:in `deliver!'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/mail-2.7.1/lib/mail/message.rb:2159:in `do_delivery'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/mail-2.7.1/lib/mail/message.rb:260:in `block in deliver'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actionmailer-5.2.3/lib/action_mailer/base.rb:560:in `block in deliver_mail'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/notifications.rb:168:in `block in instrument'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/notifications.rb:168:in `instrument'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actionmailer-5.2.3/lib/action_mailer/base.rb:558:in `deliver_mail'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/mail-2.7.1/lib/mail/message.rb:260:in `deliver'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actionmailer-5.2.3/lib/action_mailer/message_delivery.rb:114:in `block in deliver_now'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actionmailer-5.2.3/lib/action_mailer/rescuable.rb:17:in `handle_exceptions'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actionmailer-5.2.3/lib/action_mailer/message_delivery.rb:113:in `deliver_now'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actionmailer-5.2.3/lib/action_mailer/delivery_job.rb:16:in `perform'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/execution.rb:39:in `block in perform_now'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/i18n-1.7.0/lib/i18n.rb:297:in `with_locale'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/logging.rb:26:in `block (4 levels) in <module:Logging>'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/notifications.rb:168:in `block in instrument'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/notifications.rb:168:in `instrument'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/logging.rb:25:in `block (3 levels) in <module:Logging>'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/logging.rb:46:in `block in tag_logger'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:28:in `tagged'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `tagged'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/logging.rb:46:in `tag_logger'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/logging.rb:22:in `block (2 levels) in <module:Logging>'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/execution.rb:38:in `perform_now'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/execution.rb:24:in `block in execute'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/railtie.rb:28:in `block (4 levels) in <class:Railtie>'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/reloader.rb:73:in `block in wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/execution_wrapper.rb:83:in `wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/reloader.rb:72:in `wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/railtie.rb:27:in `block (3 levels) in <class:Railtie>'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/execution.rb:22:in `execute'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/queue_adapters/sidekiq_adapter.rb:42:in `perform'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:196:in `execute_job'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:164:in `block (2 levels) in process'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/middleware/chain.rb:133:in `invoke'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:163:in `block in process'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:136:in `block (6 levels) in dispatch'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/job_retry.rb:111:in `local'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:135:in `block (5 levels) in dispatch'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/rails.rb:43:in `block in call'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/reloader.rb:73:in `block in wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/reloader.rb:72:in `wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/rails.rb:42:in `call'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:131:in `block (4 levels) in dispatch'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:257:in `stats'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:126:in `block (3 levels) in dispatch'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/job_logger.rb:13:in `call'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:125:in `block (2 levels) in dispatch'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/job_retry.rb:78:in `global'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:124:in `block in dispatch'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/logger.rb:10:in `with'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/job_logger.rb:33:in `prepare'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:123:in `dispatch'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:162:in `process'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:78:in `process_one'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:68:in `run'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/util.rb:15:in `watchdog'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/util.rb:24:in `block in safe_thread'
+Started GET "/submit_email" for ::1 at 2019-12-08 11:35:28 +0100
+Processing by SubmitEmailController#index as */*
+[ActiveJob] [ActionMailer::DeliveryJob] [6c46e0ad-5a0a-473e-af5e-e5364cb792a1] Performing ActionMailer::DeliveryJob (Job ID: 6c46e0ad-5a0a-473e-af5e-e5364cb792a1) from Sidekiq(mailers) with arguments: "UserMailer", "welcome_email", "deliver_now"
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: 6c46e0ad-5a0a-473e-af5e-e5364cb792a1) to Sidekiq(mailers) with arguments: "UserMailer", "welcome_email", "deliver_now"
+Completed 200 OK in 10ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+[ActiveJob] [ActionMailer::DeliveryJob] [6c46e0ad-5a0a-473e-af5e-e5364cb792a1]   Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [6c46e0ad-5a0a-473e-af5e-e5364cb792a1]   Rendered user_mailer/welcome_email.html.erb within layouts/mailer (0.5ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [6c46e0ad-5a0a-473e-af5e-e5364cb792a1] UserMailer#welcome_email: processed outbound mail in 10.1ms
+[ActiveJob] [ActionMailer::DeliveryJob] [6c46e0ad-5a0a-473e-af5e-e5364cb792a1] Sent mail to project@test.com (715.5ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [6c46e0ad-5a0a-473e-af5e-e5364cb792a1] Date: Sun, 08 Dec 2019 11:35:28 +0100
+From: from@example.com
+To: project@test.com
+Message-ID: <5decd1f08cfad_6e323fc539e2c6cc761a5@MacBook-Pro-Sebastian.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Welcome to example.com, </h1>
+  <p>
+    You have successfully signed up to example.com,
+  </p>
+<p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [6c46e0ad-5a0a-473e-af5e-e5364cb792a1] Error performing ActionMailer::DeliveryJob (Job ID: 6c46e0ad-5a0a-473e-af5e-e5364cb792a1) from Sidekiq(mailers) in 726.76ms: Net::SMTPAuthenticationError (535-5.7.8 Username and Password not accepted. Learn more at
+):
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/2.6.0/net/smtp.rb:981:in `check_auth_response'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/2.6.0/net/smtp.rb:736:in `auth_plain'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/2.6.0/net/smtp.rb:728:in `authenticate'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/2.6.0/net/smtp.rb:565:in `do_start'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/2.6.0/net/smtp.rb:518:in `start'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/mail-2.7.1/lib/mail/network/delivery_methods/smtp.rb:109:in `start_smtp_session'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/mail-2.7.1/lib/mail/network/delivery_methods/smtp.rb:100:in `deliver!'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/mail-2.7.1/lib/mail/message.rb:2159:in `do_delivery'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/mail-2.7.1/lib/mail/message.rb:260:in `block in deliver'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actionmailer-5.2.3/lib/action_mailer/base.rb:560:in `block in deliver_mail'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/notifications.rb:168:in `block in instrument'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/notifications.rb:168:in `instrument'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actionmailer-5.2.3/lib/action_mailer/base.rb:558:in `deliver_mail'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/mail-2.7.1/lib/mail/message.rb:260:in `deliver'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actionmailer-5.2.3/lib/action_mailer/message_delivery.rb:114:in `block in deliver_now'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actionmailer-5.2.3/lib/action_mailer/rescuable.rb:17:in `handle_exceptions'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actionmailer-5.2.3/lib/action_mailer/message_delivery.rb:113:in `deliver_now'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actionmailer-5.2.3/lib/action_mailer/delivery_job.rb:16:in `perform'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/execution.rb:39:in `block in perform_now'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/i18n-1.7.0/lib/i18n.rb:297:in `with_locale'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/logging.rb:26:in `block (4 levels) in <module:Logging>'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/notifications.rb:168:in `block in instrument'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/notifications.rb:168:in `instrument'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/logging.rb:25:in `block (3 levels) in <module:Logging>'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/logging.rb:46:in `block in tag_logger'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:28:in `tagged'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `tagged'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/logging.rb:46:in `tag_logger'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/logging.rb:22:in `block (2 levels) in <module:Logging>'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/execution.rb:38:in `perform_now'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/execution.rb:24:in `block in execute'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/railtie.rb:28:in `block (4 levels) in <class:Railtie>'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/reloader.rb:73:in `block in wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/execution_wrapper.rb:83:in `wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/reloader.rb:72:in `wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/railtie.rb:27:in `block (3 levels) in <class:Railtie>'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/execution.rb:22:in `execute'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activejob-5.2.3/lib/active_job/queue_adapters/sidekiq_adapter.rb:42:in `perform'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:196:in `execute_job'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:164:in `block (2 levels) in process'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/middleware/chain.rb:133:in `invoke'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:163:in `block in process'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:136:in `block (6 levels) in dispatch'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/job_retry.rb:111:in `local'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:135:in `block (5 levels) in dispatch'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/rails.rb:43:in `block in call'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/reloader.rb:73:in `block in wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/reloader.rb:72:in `wrap'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/rails.rb:42:in `call'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:131:in `block (4 levels) in dispatch'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:257:in `stats'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:126:in `block (3 levels) in dispatch'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/job_logger.rb:13:in `call'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:125:in `block (2 levels) in dispatch'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/job_retry.rb:78:in `global'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:124:in `block in dispatch'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/logger.rb:10:in `with'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/job_logger.rb:33:in `prepare'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:123:in `dispatch'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:162:in `process'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:78:in `process_one'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/processor.rb:68:in `run'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/util.rb:15:in `watchdog'
+/Users/sebastianwcislo/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sidekiq-6.0.3/lib/sidekiq/util.rb:24:in `block in safe_thread'
+[ActiveJob] [ActionMailer::DeliveryJob] [6c46e0ad-5a0a-473e-af5e-e5364cb792a1] Performing ActionMailer::DeliveryJob (Job ID: 6c46e0ad-5a0a-473e-af5e-e5364cb792a1) from Sidekiq(mailers) with arguments: "UserMailer", "welcome_email", "deliver_now"
+[ActiveJob] [ActionMailer::DeliveryJob] [6c46e0ad-5a0a-473e-af5e-e5364cb792a1]   Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [6c46e0ad-5a0a-473e-af5e-e5364cb792a1]   Rendered user_mailer/welcome_email.html.erb within layouts/mailer (0.3ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [6c46e0ad-5a0a-473e-af5e-e5364cb792a1] UserMailer#welcome_email: processed outbound mail in 9.4ms
+[ActiveJob] [ActionMailer::DeliveryJob] [6c46e0ad-5a0a-473e-af5e-e5364cb792a1] Sent mail to project@test.com (1659.1ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [6c46e0ad-5a0a-473e-af5e-e5364cb792a1] Date: Sun, 08 Dec 2019 11:35:48 +0100
+From: from@example.com
+To: project@test.com
+Message-ID: <5decd204bad57_6e323fc53837e2f8762d5@MacBook-Pro-Sebastian.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Welcome to example.com, </h1>
+  <p>
+    You have successfully signed up to example.com,
+  </p>
+<p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [6c46e0ad-5a0a-473e-af5e-e5364cb792a1] Performed ActionMailer::DeliveryJob (Job ID: 6c46e0ad-5a0a-473e-af5e-e5364cb792a1) from Sidekiq(mailers) in 1670.57ms
+[ActiveJob] [ActionMailer::DeliveryJob] [2a4a3c36-38e5-448f-bec1-7516251f8ba9] Performing ActionMailer::DeliveryJob (Job ID: 2a4a3c36-38e5-448f-bec1-7516251f8ba9) from Sidekiq(mailers) with arguments: "UserMailer", "welcome_email", "deliver_now"
+[ActiveJob] [ActionMailer::DeliveryJob] [2a4a3c36-38e5-448f-bec1-7516251f8ba9]   Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [2a4a3c36-38e5-448f-bec1-7516251f8ba9]   Rendered user_mailer/welcome_email.html.erb within layouts/mailer (0.3ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [2a4a3c36-38e5-448f-bec1-7516251f8ba9] UserMailer#welcome_email: processed outbound mail in 9.9ms
+[ActiveJob] [ActionMailer::DeliveryJob] [2a4a3c36-38e5-448f-bec1-7516251f8ba9] Sent mail to project@test.com (1550.9ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [2a4a3c36-38e5-448f-bec1-7516251f8ba9] Date: Sun, 08 Dec 2019 11:36:15 +0100
+From: from@example.com
+To: project@test.com
+Message-ID: <5decd21fc9295_6e323fc53837e2f876318@MacBook-Pro-Sebastian.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Welcome to example.com, </h1>
+  <p>
+    You have successfully signed up to example.com,
+  </p>
+<p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [2a4a3c36-38e5-448f-bec1-7516251f8ba9] Performed ActionMailer::DeliveryJob (Job ID: 2a4a3c36-38e5-448f-bec1-7516251f8ba9) from Sidekiq(mailers) in 1561.51ms
+[ActiveJob] [ActionMailer::DeliveryJob] [f20dc9f9-ebc1-46f0-921c-23d57a28eb63] Performing ActionMailer::DeliveryJob (Job ID: f20dc9f9-ebc1-46f0-921c-23d57a28eb63) from Sidekiq(mailers) with arguments: "UserMailer", "welcome_email", "deliver_now"
+[ActiveJob] [ActionMailer::DeliveryJob] [f20dc9f9-ebc1-46f0-921c-23d57a28eb63]   Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [f20dc9f9-ebc1-46f0-921c-23d57a28eb63]   Rendered user_mailer/welcome_email.html.erb within layouts/mailer (0.3ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [f20dc9f9-ebc1-46f0-921c-23d57a28eb63] UserMailer#welcome_email: processed outbound mail in 7.2ms
+[ActiveJob] [ActionMailer::DeliveryJob] [f20dc9f9-ebc1-46f0-921c-23d57a28eb63] Sent mail to project@test.com (1242.6ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [f20dc9f9-ebc1-46f0-921c-23d57a28eb63] Date: Sun, 08 Dec 2019 11:36:17 +0100
+From: from@example.com
+To: project@test.com
+Message-ID: <5decd2215dca1_6e323fc53837e2f8764f4@MacBook-Pro-Sebastian.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Welcome to example.com, </h1>
+  <p>
+    You have successfully signed up to example.com,
+  </p>
+<p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [f20dc9f9-ebc1-46f0-921c-23d57a28eb63] Performed ActionMailer::DeliveryJob (Job ID: f20dc9f9-ebc1-46f0-921c-23d57a28eb63) from Sidekiq(mailers) in 1250.29ms

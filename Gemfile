@@ -65,3 +65,4 @@ gem "letter_opener"
 gem 'sidekiq'
 gem 'redis-namespace'
 gem 'dotenv-rails'
+gem 'responders'
